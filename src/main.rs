@@ -15,11 +15,16 @@ fn divide(x: i32, y: i32) -> i32 {
 }
 
 fn main() {
-    let num1 = 20;
-    let num2 = 22;
+    let mut num1 = String::new();
+    let mut num2 = String::new();
+    let mut action = String::new();
 
-    println!("{} + {} = {}", num1, num2, add(num1, num2));
-    println!("{} - {} = {}", num1, num2, subtract(num1, num2));
-    println!("{} * {} = {}", num1, num2, muntiply(num1, num2));
-    println!("{} / {} = {}", num1, num2, divide(num1, num2));
+    loop {
+        println!("First number:");
+        std::io::stdin().read_line(&mut num1);
+        println!("Second number:");
+        std::io::stdin().read_line(&mut num2);
+        println!("Select operation Add(1), Subtract(2), Muntiply(3), Divide(4) or Exit(0)");
+        std::io::stdin().read_line(&mut action);
+    }
 }
